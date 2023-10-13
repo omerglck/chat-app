@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  min-height: 100vh;
+  font-family: "poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// auth sayfası
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.auth {
+  background-color: white;
+  color: black;
+  width: 50vw;
+  max-width: 600px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  gap: 50px;
+  h1 {
+    font-weight: 900;
+    font-size: px;
+  }
+  @media (max-width: 700px) {
+    width: 90vw;
+  }
+  button {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    img {
+      height: 40px;
+    }
+  }
+}
+
+// room page
+
+.room-page {
+  background-color: white;
+  color: black;
+  padding: 50px 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+
+  input {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.452);
+  }
+  button {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      filter: brightness(60%);
+    }
+  }
+
+  #login {
+    background-color: rgba(0, 0, 0, 0.815);
+  }
+  #logout {
+    background: rgb(174, 6, 40);
+  }
+}
+
+// chat room
+
+.chat {
+  background-color: #64ccc5;
+  height: 70vh;
+  width: 70vw;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 800px;
+  border-radius: 10px;
+  overflow: hidden;
+  @media (max-width: 650px) {
+    width: 100vw;
+    height: 100vh;
+    border-radius: unset;
+  }
+}
+.chat header {
+  background-color: #04364a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  p {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .user {
+    font-weight: normal;
+    text-transform: none;
+  }
+  button {
+    background-color: #176b87;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+}
+.chat main {
+  background-color: #87cfe7;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  color: #04364a;
+  font-weight: 500;
+  padding: 5px;
+}
+.chat form {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 20px;
+  background-color: #04364a;
+  input {
+    width: 50%;
+    border: none;
+    background-color: #176b87;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.616);
+    }
+  }
+  button {
+    background-color: #176b87;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+.msg-user {
+  align-self: end;
+  background: #f99417;
+  padding: 4px 8px;
+  border-radius: 7px 7px 0 7px;
+}
+.msg-other {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img {
+      width: 40px;
+      border-radius: 50%;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+}
